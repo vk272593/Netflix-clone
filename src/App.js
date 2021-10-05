@@ -3,10 +3,12 @@ import "./App.css";
 import requests from "./request";
 import Row from "./Row";
 import Banner from "./Banner";
+import Nav from "./Nav";
 //API key-657c0310468a12319dd598a9ffef1e23
 function App() {
   return (
     <div className="app">
+      <Nav/>
       {/* nav */}
       {/* banner */}
       <Banner/>
