@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import requests from "./request";
+import Row from "./Row";
+import Banner from "./Banner";
+//API key-657c0310468a12319dd598a9ffef1e23
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {/* nav */}
+      {/* banner */}
+      <Banner/>
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginal}
+        isLargeRow={true}
+      />
+      <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending} />
+      <Row title="Popular Movie" fetchUrl={requests.fetchPopularMovies} />
+      <Row title="Top Rated Movie" fetchUrl={requests.fetchTopRated} />
+      {/* <Row title="Latest Movie" fetchUrl={requests.fetchlatestMovies}/> */}
+      <Row title="Upcoming Movie" fetchUrl={requests.fetchUpcomingMovies} />
+      <Row title="Popular TV Show" fetchUrl={requests.fetchpopularTv} />
+      <Row title="Top Rated TV Show" fetchUrl={requests.fetchTopRatedTv} />
     </div>
   );
 }
