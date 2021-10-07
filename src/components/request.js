@@ -5,7 +5,6 @@ const requests = {
   fetchTopRated: `/movie/top_rated?api_key=${API_KEY}`,
   fetchUpcomingMovies: `/movie/upcoming?api_key=${API_KEY}`,
   fetchPopularMovies: `/movie/popular?api_key=${API_KEY}`,
-
   fetchTopRatedTv: `/tv/top_rated?api_key=${API_KEY}`,
   fetchpopularTv: `/tv/popular?api_key=${API_KEY}`,
 };
